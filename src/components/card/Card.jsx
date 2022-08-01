@@ -1,10 +1,12 @@
 import React from 'react'
 import StyledCard from './Card.styled'
 
-const Card = () => {
+const Card = ({title, id}) => {
   return (
-    <StyledCard>
-      Card
+    <StyledCard to={`/housing?id=${id}`}>
+      <article className='card'>
+        <p className='card__title'>{title}</p>
+      </article>
     </StyledCard>
   )
 }
