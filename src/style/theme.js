@@ -14,7 +14,9 @@ const theme = {
         md: '1rem',
         l: '1.375rem',
         xl: '1.5rem',
-        xxl: '2rem'
+        xxl: '2rem',
+        big: '4.5rem',
+        huge: '10rem'
     },
     breakpoints: {
         mobile: '592px',

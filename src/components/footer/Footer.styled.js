@@ -22,6 +22,9 @@ const StyledFooter = styled.footer`
     }
 
     @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
+
+        padding-bottom: 1em;
+        
         .text {
             font-size: ${({theme}) => theme.fontSize.md};
         }
