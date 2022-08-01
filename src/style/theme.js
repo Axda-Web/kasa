@@ -13,7 +13,8 @@ const theme = {
         sm: '.75rem',
         md: '1rem',
         l: '1.375rem',
-        xl: '1.5rem'
+        xl: '1.5rem',
+        xxl: '2rem'
     },
     breakpoints: {
         mobile: '592px',

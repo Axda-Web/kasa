@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <StyledHeader>
       <div>
-        <img className='header__logo' src="./img/logo-header.svg" alt="Kasa logo" />
+        <img className='header__logo' src="./assets/img/logo-header.svg" alt="Kasa logo" />
       </div>
       <nav>
         <ul className='header__nav'>

@@ -51,6 +51,17 @@ const StyledHeader = styled.header`
             }
         }   
     }
+
+    @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
+
+        .header__nav {
+            text-transform: capitalize;
+
+            li {
+            margin-left: 2.5em;
+            }
+        }
+    }
 `
 
 export default StyledHeader
