@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 const StyledCardsList = styled.section`
+
+    margin: 20px 0;
+
     .container {
         display: grid;
         grid-template-columns: 1fr;
@@ -19,7 +22,9 @@ const StyledCardsList = styled.section`
     }
 
     @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
+        
         padding: 40px;
+        margin: 40px 0;
 
         .container {
             grid-template-columns: repeat(3, 1fr);

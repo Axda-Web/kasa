@@ -1,10 +1,14 @@
 import styled from "styled-components";
 
 const StyledHome = styled.main`
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
     .hero {
         height: 100px;
         padding: 1em;
-        margin-bottom: 20px;
         border-radius: 10px;
         background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('./assets/img/hero.jpg');
         background-position: center;
@@ -35,7 +39,6 @@ const StyledHome = styled.main`
     @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
         .hero {
             height: 200px;
-            margin-bottom: 40px;
             padding: 0;
 
             &__text {

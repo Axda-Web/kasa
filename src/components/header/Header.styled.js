@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
+
+    width: 90%;
+    max-width: 1200px;
+    margin: 1rem auto;
+
     display: flex;
     justify-content: space-between;
-    margin: 1rem 0;
 
     .header__logo {
         width: 120px;
@@ -34,7 +38,7 @@ const StyledHeader = styled.header`
     }
 
     @media (min-width: ${({theme}) => theme.breakpoints.mobile}) {
-        margin: 2rem 0;
+        margin: 2rem auto;
 
         .header__logo {
             width: 150px;

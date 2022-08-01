@@ -3,7 +3,12 @@ import StyledFooter from './Footer.styled'
 
 const Footer = () => {
   return (
-    <StyledFooter>Footer</StyledFooter>
+    <StyledFooter>
+      <div className="logo">
+        <img src="./assets/img/logo-footer.svg" alt="Kasa logo" />
+      </div>
+      <p className='text'>© 2020 Kasa. All rights reserved</p>
+    </StyledFooter>
   )
 }
 
