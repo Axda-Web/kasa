@@ -10,16 +10,17 @@ const Collapse = ({head, body}) => {
   }
 
   return (
-    <StyledCollapse>
+    <StyledCollapse >
+    <div className={`collapse ${showCollapse ? 'show' : ''}`}>
       <div className="head" onClick={handleCollapseClick}>
-        <p className="head__text">{head}</p>
+        <p className="head__text">{head}titre</p>
         <div className="head__icons">
-          { showCollapse ? <img src="./assets/icons/arrow-up.svg" alt="" className="head__icon head__icon--up" /> :
-          <img src="./assets/icons/arrow-down.svg" alt="" className="head__icon head__icon--down" /> }
+          <img src="./assets/icons/arrow-up.svg" alt="" className="head__icon head__icon--up" /> 
           
         </div>
       </div>
-      { showCollapse && <div className="body">{body}</div> }
+      <div className="body">{body} Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque alias dicta harum molestias numquam cumque impedit architecto repudiandae fuga earum cupiditate nemo, vel molestiae. Rem aperiam laborum explicabo repellat facere!</div> 
+    </div>
     </StyledCollapse>
   )
 }

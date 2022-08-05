@@ -13,7 +13,10 @@ const StyledCard = styled(Link)`
         height: 250px;
         border-radius: 10px;
         color: ${({theme}) => theme.colors.white};
-        background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)), ${({theme}) => theme.colors.primary};
+        background:linear-gradient(0deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)), url(${({backgroundImgUrl}) => backgroundImgUrl});
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 
         &__title {

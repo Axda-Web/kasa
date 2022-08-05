@@ -21,10 +21,27 @@ const StyledCollapse = styled.article`
     .body {
         background-color: ${({theme}) => theme.colors.grey.background};
         color: ${({theme}) => theme.colors.primary};
-        padding: 2em 1em 1em;
         position: relative;
         top: -10px;
         z-index: -10;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height .5s, padding .5s;
+    }
+
+
+    .collapse.show .body {
+        max-height: 1000px;
+        padding: 2em 1em 1em;
+    }
+
+    .collapse .head__icon {
+        transition: transform .5s;
+        transform: rotate(180deg);
+    }
+
+    .collapse.show .head__icon {
+        transform: rotate(0deg);
     }
 
 `
