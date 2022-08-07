@@ -1,9 +1,9 @@
 import React from 'react'
 import StyledBadge from './Badge.styled'
 
-const Badge = () => {
+const Badge = ({name}) => {
   return (
-    <StyledBadge>Badge</StyledBadge>
+    <StyledBadge>{name}</StyledBadge>
   )
 }
 

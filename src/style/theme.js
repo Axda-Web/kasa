@@ -10,8 +10,11 @@ const theme = {
         }    
     },
     fontSize: {
+        xsm: '.6875em',
         sm: '.75rem',
+        sm$: '.875rem',
         md: '1rem',
+        md$: '1.125rem',
         l: '1.375rem',
         xl: '1.5rem',
         xxl: '2rem',

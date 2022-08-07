@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import StyledCollapse from './Collapse.styled'
+import { v4 as uuidv4 } from 'uuid'
+
 
 const Collapse = ({head, body}) => {
 
@@ -13,13 +15,18 @@ const Collapse = ({head, body}) => {
     <StyledCollapse >
     <div className={`collapse ${showCollapse ? 'show' : ''}`}>
       <div className="head" onClick={handleCollapseClick}>
-        <p className="head__text">{head}titre</p>
+        <p className="head__text">{head}</p>
         <div className="head__icons">
           <img src="./assets/icons/arrow-up.svg" alt="" className="head__icon head__icon--up" /> 
-          
         </div>
       </div>
-      <div className="body">{body} Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque alias dicta harum molestias numquam cumque impedit architecto repudiandae fuga earum cupiditate nemo, vel molestiae. Rem aperiam laborum explicabo repellat facere!</div> 
+      <div className="body">{
+        Array.isArray(body) ?
+        <ul className='equipments-container'>
+          {body.map( equipment => <li key={uuidv4()} className='equipment'>{equipment}</li> )}
+        </ul> :
+        <p>{body}</p>
+      }</div> 
     </div>
     </StyledCollapse>
   )

@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 const StyledCollapse = styled.article`
 
-    margin: 1em;
+    margin: 1em 0;
+    width: 100%;
 
     .head, .body {
         border-radius: 10px;
@@ -16,17 +17,36 @@ const StyledCollapse = styled.article`
         justify-content: space-between;
         align-items: center;
         cursor: pointer;
+
+        &__text {
+            font-size: ${({theme}) => theme.fontSize.sm$};
+        }
+
+        &__icon {
+            height: 10px;
+        }
     }
 
     .body {
         background-color: ${({theme}) => theme.colors.grey.background};
         color: ${({theme}) => theme.colors.primary};
+        font-size: ${({theme}) => theme.fontSize.sm$};
         position: relative;
         top: -10px;
         z-index: -10;
         max-height: 0px;
         overflow: hidden;
         transition: max-height .5s, padding .5s;
+
+        .equipments-container {
+            padding-left: 0;
+            line-height: 1.5;
+
+            .equipment {
+                list-style: none;
+                list-style-position: outside;
+            }
+        }
     }
 
 
@@ -42,6 +62,24 @@ const StyledCollapse = styled.article`
 
     .collapse.show .head__icon {
         transform: rotate(0deg);
+    }
+
+
+    @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
+        
+        .head {
+            &__text {
+                font-size: ${({theme}) => theme.fontSize.md};
+            }
+
+            &__icon {
+                height: 15px;
+            }
+        }
+
+        .body {
+            font-size: ${({theme}) => theme.fontSize.md};
+        }
     }
 
 `

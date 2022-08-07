@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import StyledCardsList from './CardsList.styled'
+import { v4 as uuidv4 } from 'uuid'
 
 import Card from '../card'
 
@@ -16,7 +17,7 @@ const CardsList = () => {
     getData()
   }, [])
 
-  const cards = data.map( card => <Card {...card} />)
+  const cards = data.map( card => <Card key={uuidv4()} {...card} />)
 
 
   return (
