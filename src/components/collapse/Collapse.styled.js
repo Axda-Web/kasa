@@ -37,10 +37,10 @@ const StyledCollapse = styled.article`
         max-height: 0px;
         overflow: hidden;
         transition: max-height .5s, padding .5s;
+        line-height: 1.5;
 
         .equipments-container {
             padding-left: 0;
-            line-height: 1.5;
 
             .equipment {
                 list-style: none;

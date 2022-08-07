@@ -50,7 +50,7 @@ const Housing = () => {
           <h1 className="title">{data.title}</h1>
           <p className="location">{data.location}</p>
         </div>
-        <BadgesList tags={data.tags} />
+        <BadgesList className="badges" tags={data.tags} />
         <div className="container">
           <StarsList fullStars={data.rating} />
           <Profile name={data.host.name} picture={data.host.picture} />
