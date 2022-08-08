@@ -1,5 +1,8 @@
-import React, { useState } from 'react'
+import React, { useContext } from 'react'
+import { HousingContext } from '../../context/housingContext'
 import StyledHousing from './Housing.styled'
+
+import { useSearchParams } from 'react-router-dom'
 
 import Slideshow from '../../components/slideshow'
 import BadgesList from '../../components/badgeslist'
@@ -9,56 +12,31 @@ import Collapse from '../../components/collapse/Collapse'
 
 const Housing = () => {
 
-  const [data, setData] = useState({
-    "id": "c67ab8a7",
-    "title": "Appartement cosy",
-    "cover": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-    "pictures": [
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-2.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-3.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-4.jpg",
-    "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-5.jpg"
-    ],  
-    "description": "Votre maison loin de chez vous. Que vous veniez de l'autre bout du monde, ou juste de quelques stations de RER, vous vous sentirez chez vous dans notre appartement.",
-    "host": {
-    "name": "Nathalie Jean",
-    "picture": "https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/profile-picture-12.jpg"
-    },
-    "rating": "5",
-    "location": "Ile de France - Paris 17e",
-    "equipments": [
-    "Équipements de base",
-    "Micro-Ondes",
-    "Douche italienne",
-    "Frigo",
-    "WIFI"
-    ],
-    "tags": [
-    "Batignolle",
-    "Montmartre"
-    ]
-    })
+  const [searchParams, setSearchParams] = useSearchParams()
+  const id = searchParams.get('id')
 
-  
+  const { housing } = useContext(HousingContext)
+
+  const selectedHousing = housing.find( housing => housing.id === id)
+  const { pictures, title, location, tags, rating, host, description, equipments } = selectedHousing
 
   return (
     <StyledHousing>
-      <Slideshow />
+      <Slideshow photosUrl={pictures}/>
       <section className="info">
         <div className="text">
-          <h1 className="title">{data.title}</h1>
-          <p className="location">{data.location}</p>
+          <h1 className="title">{title}</h1>
+          <p className="location">{location}</p>
         </div>
-        <BadgesList className="badges" tags={data.tags} />
+        <BadgesList className="badges" tags={tags} />
         <div className="container">
-          <StarsList fullStars={data.rating} />
-          <Profile name={data.host.name} picture={data.host.picture} />
+          <StarsList fullStars={rating} />
+          <Profile name={host.name} picture={host.picture} />
         </div>
       </section>
       <section className="collapses">
-        <Collapse head="Description" body={data.description} />
-        <Collapse head="Équipements" body={data.equipments} />
+        <Collapse head="Description" body={description} />
+        <Collapse head="Équipements" body={equipments} />
       </section>
     </StyledHousing>
   )

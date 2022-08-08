@@ -19,9 +19,9 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path=':id' element={<Housing />} />
-        <Route path='/error' element={<Error />} />
+        <Route path='/housing' element={<Housing />} />
         <Route path='/about' element={<About />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </BrowserRouter>

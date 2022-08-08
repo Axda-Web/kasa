@@ -1,6 +1,7 @@
 import React from 'react'
 import StyledCard from './Card.styled'
 
+
 const Card = ({title, id, cover}) => {
   return (
     <StyledCard to={`/housing?id=${id}`} backgroundImgUrl={cover}>

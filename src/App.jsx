@@ -5,6 +5,7 @@ import theme from './style/theme'
 import GlobalStyles from './style/Global.styled'
 
 import Router from './router'
+import HousingArea from './context'
 
 
 const App = () => {
@@ -12,7 +13,9 @@ const App = () => {
     <ThemeProvider theme={theme}>
       <GlobalStyles />
       <StyledApp>
-        <Router />
+        <HousingArea>
+          <Router />
+        </HousingArea>
       </StyledApp>
     </ThemeProvider>
   )

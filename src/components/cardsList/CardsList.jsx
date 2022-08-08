@@ -1,6 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import StyledCardsList from './CardsList.styled'
 import { v4 as uuidv4 } from 'uuid'
+
+import { HousingContext } from '../../context/housingContext'
+
 
 import Card from '../card'
 
@@ -16,6 +19,9 @@ const CardsList = () => {
     }
     getData()
   }, [])
+
+  const { setHousing } = useContext(HousingContext)
+  setHousing(data)
 
   const cards = data.map( card => <Card key={uuidv4()} {...card} />)
 
