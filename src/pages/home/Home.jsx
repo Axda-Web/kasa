@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { Suspense } from 'react'
 import StyledHome from './Home.styled'
 
-import CardsList from '../../components/cardsList/CardsList'
+import Loader from '../../components/loader'
+const CardsList = React.lazy( async () => await import('../../components/cardsList'))
 
 const Home = () => {
   return (
@@ -9,7 +10,9 @@ const Home = () => {
       <div className='hero'>
         <p className='hero__text'>Chez vous,<br /> partout et ailleurs</p>
       </div>
-      <CardsList />
+      <Suspense fallback={<Loader />}>
+        <CardsList />
+      </Suspense>
     </StyledHome>
   )
 }
