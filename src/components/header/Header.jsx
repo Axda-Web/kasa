@@ -1,12 +1,15 @@
 import React from 'react'
 import StyledHeader from './Header.styled'
 
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const Header = () => {
+
+  const navigate = useNavigate()
+
   return (
     <StyledHeader>
-      <div>
+      <div className='logo-container' onClick={e => navigate('/')}>
         <img className='header__logo' src="./assets/img/logo-header.svg" alt="Kasa logo" />
       </div>
       <nav>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import StyledSlideshow from './Slideshow.styled'
 
 const Slideshow = ({photosUrl}) => {
@@ -21,7 +22,6 @@ const Slideshow = ({photosUrl}) => {
     setCurrentPhotoUrlIndex( prevPhotoUrlIndex => prevPhotoUrlIndex + 1)
   }
 
-
   return (
     <StyledSlideshow backgroundImgUrl={photosUrl[currentPhotoUrlIndex]}>
       <img  src="./assets/icons/arrow-left.svg"
@@ -36,6 +36,14 @@ const Slideshow = ({photosUrl}) => {
           />
     </StyledSlideshow>
   )
+}
+
+Slideshow.defaultProps = {
+  photosUrl: []
+}
+
+Slideshow.propTypes = {
+  photosUrl: PropTypes.array.isRequired
 }
 
 export default Slideshow

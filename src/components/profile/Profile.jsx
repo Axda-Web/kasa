@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import StyledProfile from './Profile.styled'
 
 const Profile = ({name, picture}) => {
@@ -13,6 +14,16 @@ const Profile = ({name, picture}) => {
         </div>
     </StyledProfile>
   )
+}
+
+Profile.defaultProps = {
+  name: 'Loading...',
+  picture: ''
+}
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  picture: PropTypes.string.isRequired
 }
 
 export default Profile

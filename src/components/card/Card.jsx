@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import StyledCard from './Card.styled'
 
 
@@ -10,6 +11,18 @@ const Card = ({title, id, cover}) => {
       </article>
     </StyledCard>
   )
+}
+
+Card.defaultProps = {
+  title: 'Loading...',
+  id: 'Loading...',
+  cover: ''
+}
+
+Card.propTypes = {
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  cover: PropTypes.string.isRequired
 }
 
 export default Card

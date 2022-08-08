@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { v4 as uuidv4 } from 'uuid'
 import StyledStarsList from './StarsList.styled'
 
@@ -15,6 +16,14 @@ const StarsList = ({fullStars}) => {
       {starsDisplay}
     </StyledStarsList>
   )
+}
+
+StarsList.defaultProps = {
+  fullStars: ''
+}
+
+StarsList.propTypes = {
+  fullStars: PropTypes.string.isRequired
 }
 
 export default StarsList

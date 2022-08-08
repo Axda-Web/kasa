@@ -9,9 +9,13 @@ const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
 
-    .header__logo {
-        width: 120px;
-        height: auto;
+    .logo-container {
+        cursor: pointer;
+
+        .header__logo {
+            width: 120px;
+            height: auto;
+        }
     }
 
     .header__nav {

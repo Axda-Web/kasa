@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import PropTypes from 'prop-types'
 import StyledCollapse from './Collapse.styled'
 import { v4 as uuidv4 } from 'uuid'
 
@@ -20,16 +21,29 @@ const Collapse = ({head, body}) => {
           <img src="./assets/icons/arrow-up.svg" alt="" className="head__icon head__icon--up" /> 
         </div>
       </div>
-      <div className="body">{
+      { showCollapse && <div className="body">{
         Array.isArray(body) ?
         <ul className='equipments-container'>
           {body.map( equipment => <li key={uuidv4()} className='equipment'>{equipment}</li> )}
         </ul> :
         <p>{body}</p>
-      }</div> 
+      }</div> }
     </div>
     </StyledCollapse>
   )
+}
+
+Collapse.defaultProps = {
+  head: 'Loading...',
+  body: 'Loading...'
+}
+
+Collapse.propTypes = {
+  head: PropTypes.string.isRequired,
+  body: PropTypes.oneOfType([
+    PropTypes.string.isRequired,
+    PropTypes.array.isRequired
+  ])
 }
 
 export default Collapse

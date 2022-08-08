@@ -34,10 +34,8 @@ const StyledCollapse = styled.article`
         position: relative;
         top: -10px;
         z-index: -10;
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height .5s, padding .5s;
         line-height: 1.5;
+        padding: 2em 1em 1em;
 
         .equipments-container {
             padding-left: 0;
@@ -47,12 +45,6 @@ const StyledCollapse = styled.article`
                 list-style-position: outside;
             }
         }
-    }
-
-
-    .collapse.show .body {
-        max-height: 1000px;
-        padding: 2em 1em 1em;
     }
 
     .collapse .head__icon {
