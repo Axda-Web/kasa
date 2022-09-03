@@ -24,16 +24,19 @@ const Slideshow = ({photosUrl}) => {
 
   return (
     <StyledSlideshow backgroundImgUrl={photosUrl[currentPhotoUrlIndex]}>
-      <img  src="./assets/icons/arrow-left.svg"
-            alt=""
-            className="arrow arrow--left"
-            onClick={handlePrevClick}
-          />
-      <img  src="./assets/icons/arrow-right.svg"
-            alt=""
-            className="arrow arrow--right"
-            onClick={handleNextClick}
-          />
+      { photosUrl.length > 1 && 
+      <>
+        <img  src="./assets/icons/arrow-left.svg"
+              alt=""
+              className="arrow arrow--left"
+              onClick={handlePrevClick}
+            />
+        <img  src="./assets/icons/arrow-right.svg"
+              alt=""
+              className="arrow arrow--right"
+              onClick={handleNextClick}
+            />
+      </>}
     </StyledSlideshow>
   )
 }

@@ -33,7 +33,7 @@ const StyledSlideshow = styled.div`
     }
 
     @media (min-width: ${({theme}) => theme.breakpoints.desktop}) {
-       height: 350px;
+       height: 415px;
 
        .arrow {
         min-height: 50px;
