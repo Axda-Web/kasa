@@ -8,7 +8,7 @@ const Error = () => {
     <StyledError>
         <p className="number">404</p>
         <p className="text">Oups! La page que vous demandez n'existe pas.</p>
-        <Link className="link" to='/'>Retourner sur la page d'acceuil</Link>
+        <Link className="link" to='/'>Retourner sur la page d'accueil</Link>
     </StyledError>
   )
 }

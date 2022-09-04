@@ -18,6 +18,7 @@ const StyledHome = styled.main`
 
         &__text {
             color: ${({theme}) => theme.colors.white};
+            font-size: ${({theme}) => theme.fontSize.xl};
         }
     }
 

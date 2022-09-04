@@ -10,7 +10,7 @@ const Profile = ({name, picture}) => {
     <StyledProfile>
         <div className="name">{firstName}<br />{lastName}</div>
         <div className='picture-container'>
-            <img src={picture} alt="profile picture" className="picture" />
+            <img src={picture} alt="profile" className="picture" />
         </div>
     </StyledProfile>
   )
