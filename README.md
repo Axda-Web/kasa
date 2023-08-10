@@ -1,19 +1,20 @@
-# Daily Quotes
+# Kasa
 
-[![React.js](https://img.shields.io/badge/React.js-18.1.0-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
+[![React.js](https://img.shields.io/badge/React.js-18.2.0-61DAFB?logo=react&logoColor=white&style=flat-square)](https://reactjs.org/)
 [![Styled Components](https://img.shields.io/badge/Styled_Components-5.3.5-%23DB7093?logo=styled-components&logoColor=white&style=flat-square)](https://styled-components.com/)
 
 ![screenshot](/screenshot.jpg)
 
 ## Description
 
-Single Page Application displaying quotes dynamically thanks to the use of an API. It also allows to tweet the chosen quote on its Twitter account. Use of the Styled-components library for the formatting.
+Build an AirBnb like platform using React and Styled Components. I used React Router for page navigation. Eploration of React advanced concepts like Context API, lazy loading and PropTypes.
 
 This project explores various concepts and features including:
 
 - React State
+- React Context
+- React PropTypes
 - CSS in JS
-- CSS Animations
 - ES6
 - REST API
 
@@ -21,23 +22,23 @@ and more.
 
 ## Technologies Used
 
-- [React.js](https://reactjs.org/) - Version 18.1.0
+- [React.js](https://reactjs.org/) - Version 18.2.0
 - [Styled Components](https://styled-components.com/) - Version 5.3.5
 
 ## Getting Started
 
-To get started with the Daily Quotes project, follow the steps below:
+To get started with the Kasa project, follow the steps below:
 
 1. Clone the repository:
 
    ```shell
-   git clone git@github.com:Axda-Web/dailyQuotes.git
+   git clone git@github.com:Axda-Web/kasa.git
    ```
 
 2. Change into the project directory:
 
    ```shell
-   cd dailyQuotes
+   cd kasa
    ```
 
 3. Install the project dependencies:
@@ -52,4 +53,4 @@ To get started with the Daily Quotes project, follow the steps below:
    npm start
    ```
 
-A deployed version of the Daily Quotes project is available on Vercel at [Daily-Quotes](https://daily-quotes-beryl.vercel.app/).
+A deployed version of the Kasa project is available on Vercel at [Kasa](https://kasa-sable.vercel.app/).
