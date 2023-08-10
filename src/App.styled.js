@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-const StyledApp = styled.div`
+const StyledApp = styled.div``;
 
-`
-
-export default StyledApp
+export default StyledApp;
